@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# Set the URL and token to revoke
+url="https://appresponse.example.com/api/v1/tokens/revoke"
+token="your_token_here"
+
+# Set the cURL options and headers
+curl_opts="-s -S -X POST -H 'Authorization: Bearer $token' -H 'Content-Type: application/json'"
+
+# Make the API request
+curl $curl_opts $url
+
+
+
+
+#Set the URL and token to revoke. Replace https://appresponse.example.com with the URL of your AppResponse appliance and your_token_here with the token you want to revoke.
+
+#Set the cURL options and headers. -s and -S are optional options for silent mode and show errors if present, respectively. -X POST specifies that we want to make a POST request. -H 'Authorization: Bearer $token' sets the Authorization header with the token we want to revoke. -H 'Content-Type: application/json' sets the Content-Type header to application/json.
+
+#Make the API request. The curl command is used with the options and headers we set, and the URL we want to revoke the token from.
