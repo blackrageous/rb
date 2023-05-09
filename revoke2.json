@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Set the URL and token to revoke
+url="https://appresponse.example.com/api/v1/tokens/revoke"
+token="your_token_here"
+
+# Set the cURL options and headers
+curl_opts="-s -S -X POST -H 'Authorization: Token $token' -H 'Content-Type: application/json'"
+
+# Make the API request
+curl $curl_opts $url
